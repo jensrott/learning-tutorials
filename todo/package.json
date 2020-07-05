@@ -1,0 +1,19 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "Learning Graphql",
+  "scripts": {
+    "install": "cd client && npm install && cd ../backend && npm install",
+    "start:front": "cd client && npm run start",
+    "build:front": "cd client && npm run build",
+    "start:back": "cd backend && npm run start",
+    "build:back": "cd backend && npm run build",
+    "build": "concurrently \"npm run build:back\"  \"npm run build:front\"",
+    "start": "concurrently \"npm run start:back\"  \"npm run start:front\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^5.2.0"
+  }
+}
